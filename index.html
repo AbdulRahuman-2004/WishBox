@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7950bd">
+  <title>HeartLink – Messages Made Special</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="love heart.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#"> 💕 HeartLink</a>
+    <p class="tagline">
+    <span id="typingText"></span>
+</p>
+    <span class="tagline">😍💖</span>
+  </header>
+
+  <main class="container">
+   
+<section class="hero">
+  <div class="quote-box">
+    <span class="quote-icon">❝</span>
+    <h2 id="topQuote">
+      காதல் என்பது அருகில் இருப்பது மட்டுமல்ல,
+      எங்கு இருந்தாலும் மனதில் இருப்பது! 💜
+    </h2>
+    <span class="quote-icon closing">❞</span>
+    <p>— HeartLink 💜</p>
+  </div>
+
+  <span class="eyebrow">A little love, in every message</span>
+  <h1>Make someone feel <span>special.</span></h1>
+  <p>Create a personal message and a beautiful greeting image to share with someone you care about.</p>
+</section>
+
+    <section class="generator-card">
+      <h2>Create your message</h2>
+      <p class="section-intro">Choose your preferences and let HeartLink create something special.</p>
+
+      <form id="messageForm">
+        <div class="form-grid">
+          <label>
+            Your name
+            <input id="senderName" type="text" placeholder="Enter your name" required>
+          </label>
+
+          <label>
+            Recipient's name
+            <input id="recipientName" type="text" placeholder="Who is this for?" required>
+          </label>
+
+          <label>
+            Relationship
+            <select id="relationship" required>
+              <option value="lover">Lover</option>
+              <option value="family">Family</option>
+              <option value="friend">Friend</option>
+              <option value="bestie">Best friend</option>
+              <option value="brother">Brother</option>
+              <option value="sister">Sister</option>
+              <option value="other">Someone special</option>
+            </select>
+          </label>
+
+          <label>
+            Occasion
+            <select id="occasion" required>
+              <option value="love">Love message</option>
+              <option value="friendship">Friendship</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="sorry">Sorry</option>
+              <option value="missyou">Missing you</option>
+              <option value="thanks">Thank you</option>
+              <option value="congratulations">Congratulations</option>
+              <option value="justbecause">Just because</option>
+            </select>
+          </label>
+
+          <label>
+            Language
+            <select id="language">
+              <option value="english">English</option>
+              <option value="tamil">தமிழ் (Tamil)</option>
+              <option value="tanglish">Tanglish</option>
+            </select>
+          </label>
+
+          <label>
+            Message style
+            <select id="tone">
+              <option value="sweet">Sweet</option>
+              <option value="romantic">Romantic</option>
+              <option value="emotional">Emotional</option>
+              <option value="funny">Funny</option>
+              <option value="simple">Simple</option>
+            </select>
+          </label>
+
+          <label>
+            Image theme
+            <select id="theme">
+              <option value="auto">Match my relationship</option>
+              <option value="love">Love – hearts and roses</option>
+              <option value="family">Family – warm flowers</option>
+              <option value="friendship">Friendship – cheerful colours</option>
+              <option value="birthday">Birthday – celebration</option>
+              <option value="nature">Nature – flowers and leaves</option>
+              <option value="elegant">Elegant – soft and minimal</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="full-field">
+          Add your own personal words (optional)
+          <textarea id="personalNote" rows="3" placeholder="Write something personal to include in your message..."></textarea>
+        </label>
+
+        <button class="primary-button" type="submit">Create my message & image ✨</button>
+      </form>
+    </section>
+
+    <section id="resultSection" class="result-card" hidden>
+      <div class="result-heading">
+        <div>
+          <span class="eyebrow">Made with HeartLink</span>
+          <h2>Your creation is ready!</h2>
+        </div>
+        <span class="result-heart">💜</span>
+      </div>
+
+      <label for="generatedMessage">Your message</label>
+      <textarea id="generatedMessage" rows="5"></textarea>
+
+      <div class="image-preview-wrap">
+        <h3>Your greeting image</h3>
+        <canvas id="greetingCanvas" width="1080" height="1080"></canvas>
+      </div>
+
+      <div class="action-buttons">
+        <button type="button" id="copyButton" class="secondary-button">Copy message</button>
+        <button type="button" id="downloadButton" class="secondary-button">Download image</button>
+        <button type="button" id="shareButton" class="primary-button">Share both on 💌</button>
+        <button type="button" id="regenerateButton" class="secondary-button">Try another message</button>
+      </div>
+
+      <p id="shareNote" class="share-note" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💜 by HeartLink</p>
+    <small>Share your feelings, one message at a time.</small>
+  </footer>
+  <div class="floating-heart" aria-hidden="true">💜</div>
+   <div id="occasionAnimation" class="occasion-animation" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
