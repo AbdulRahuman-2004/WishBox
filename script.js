@@ -760,7 +760,7 @@ $("shareButton").addEventListener("click", async () => {
     }
 
     // Your HeartLink website URL
-    const websiteLink = "https://abdulrahuman-2004.github.io/HEARTLINK/";
+    const websiteLink = "https://wishboxx.netlify.app//";
 
     // Message + website link
     const finalMessage =
